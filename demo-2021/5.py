@@ -12,7 +12,12 @@ def transform(n):
         summ+=x
     x = summ%2
     return strNumber+str(x)
-
-inNumber = int(input())
-binIn=to2(inNumber)
-print(transform(transform(binIn)))
+ 
+p=0
+outNumber = -1
+while (outNumber<78):
+    binIn=to2(p)
+    outNumber = int(str(transform(transform(binIn))),2)
+    p+=1
+print(p-1)
+    
